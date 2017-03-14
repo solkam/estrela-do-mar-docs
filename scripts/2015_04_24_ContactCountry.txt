@@ -1,0 +1,104 @@
+#Ambientes executados: Box, Amz29, Amz22
+
+# PAIS EM CONTACT
+# ###############
+update contact set country='Brasil' where lower(country) like '%brasil%';
+update contact set country='Brasil' where lower(country) like '%brazil%';
+update contact set country='Brasil' where lower(country) like '%braisl%';
+update contact set country='Brasil' where lower(country) like '%brasi%';
+update contact set country='Brasil' where lower(country) like '%brasol%';
+update contact set country='Brasil' where lower(country) like '%brsil%';
+update contact set country='Brasil' where lower(country) like '%brasl%';
+update contact set country='Brasil' where lower(country) like '%basil%';
+update contact set country='Brasil' where lower(country) = 'rj';
+update contact set country='Brasil' where lower(country) = 'ro';
+update contact set country='Brasil' where lower(country) = 'br';
+update contact set country='Brasil' where lower(country) = 'minas gerais';
+update contact set country='Brasil' where lower(country) = 'mg';
+update contact set country='Brasil' where lower(country) = 'go';
+update contact set country='Brasil' where lower(country) = 'leonardo gonzaga';
+update contact set country='Brasil' where lower(country) = 'santa catarina';
+update contact set country='Brasil' where lower(country) = 'florianopolis';
+update contact set country='Brasil' where lower(country) = 'pais';
+
+update contact set country='Chile' where lower(country) like '%chile%';
+update contact set country='Chile' where lower(country) like '%cgile%';
+update contact set country='Chile' where lower(country) like '%chille%';
+update contact set country='Chile' where lower(country) like '%temuco%';
+update contact set country='Chile' where lower(city) like 'santiago%';
+
+update contact set country='Colombia' where lower(city) like 'bogot%';
+update contact set country='Colombia' where lower(city) like 'medel%';
+
+update contact set country='Francia' where lower(country) like '%france%';
+update contact set country='Francia' where lower(country) like '%franca%';
+
+update contact set country='Venezuela' where lower(country) like '%venesuela%';
+
+update contact set country='Estados Unidos' where lower(country) like '%usa%';
+update contact set country='Estados Unidos' where lower(country) like '%eeuu%';
+
+update contact set country='Argentina' where lower(country) like '%angentina%';
+update contact set country='Argentina' where lower(city) like 'buenos%';
+
+
+update contact set country='Mexico' where lower(country) like '%Cancun%';
+update contact set country='Mexico' where lower(country) = 'mexico';
+
+update contact set country='Peru' where lower(country) like '%peru%';
+update contact set country='Peru' where lower(country) like '%perú%';
+
+
+update contact set country='???' where country is null;
+update contact set country='???' where country = '';
+update contact set country='???' where lower(country) like '%?%';
+update contact set country='???' where lower(country) like '%pp%';
+update contact set country='???' where lower(country) like '%0%';
+update contact set country='???' where lower(country) like '%1%';
+update contact set country='???' where lower(country) like '%2%';
+update contact set country='???' where lower(country) like '%3%';
+update contact set country='???' where lower(country) like '%4%';
+update contact set country='???' where lower(country) like '%5%';
+update contact set country='???' where lower(country) like '%6%';
+update contact set country='???' where lower(country) like '%7%';
+update contact set country='???' where lower(country) like '%8%';
+update contact set country='???' where lower(country) like '%9%';
+update contact set country='???' where lower(country) like '%xx%';
+update contact set country='???' where lower(country) like '%sdf%';
+update contact set country='???' where lower(country) like '%oo%';
+update contact set country='???' where lower(country) like 'asd%';
+update contact set country='???' where lower(country) like 'fgh%';
+
+update contact set country='???' where lower(country) = 'a';
+update contact set country='???' where lower(country) = 'b';
+update contact set country='???' where lower(country) = 'c';
+update contact set country='???' where lower(country) = 'd';
+update contact set country='???' where lower(country) = 'o';
+update contact set country='???' where lower(country) = 'p';
+update contact set country='???' where lower(country) = 'q';
+update contact set country='???' where lower(country) = 'eee';
+update contact set country='???' where lower(country) = 'gfz';
+update contact set country='???' where lower(country) = 'cidade';
+
+#analizar se todos sao do Brasil com:
+select id, civilName, city from contact where country='???';
+select country, count(*) from contact group by country;
+
+
+#se sim, executar o update:
+update contact set country='Brasil' where country='???';
+
+
+# country eh obrigatorio
+alter table contact modify country varchar(90) not null;
+
+
+
+
+
+
+
+
+
+
+

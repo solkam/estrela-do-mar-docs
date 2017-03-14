@@ -1,0 +1,10 @@
+#ambientes: box
+
+#carga inicial
+insert into ConfigParam (paramName, paramValue) values ('PREVIOUS_DAYS_FOR_TOTAL_REFUND_WHEN_CANCEL_REGISTER', '30');
+insert into ConfigParam (paramName, paramValue) values ('PREVIOUS_DAYS_FOR_HALF_REFUND_WHEN_CANCEL_REGISTER', '15');
+
+#register status de PIERCED para TRANSFERED e ANULED para CANCELED
+update register set status='TRANSFERED' where status='PIERCED';
+update register set status='CANCELED' where status='ANULED';
+

@@ -1,0 +1,79 @@
+
+#1) truncar tabelas de inscricao (e suas auditorias):
+delete from register_detail_payment;
+delete from register_detail_account_receivable_observation;
+delete from register_detail_account_receivable_detail;
+delete from register_detail_account_receivable;
+delete from register_detail;
+delete from medical_answer;
+delete from medical_question;
+delete from register_docket;
+delete from Transport_x_Register;
+delete from TransportClassification;
+delete from Transport;
+delete from TransbankPayment;
+delete from TransbankPaymentParam;
+update register set responsableRegister_id = null;
+delete from register;
+delete from register_credit;
+delete from account;
+delete from credit_card_type;
+delete from inscription_type;
+delete from event;
+delete from event_week;
+delete from HostingConfirmed;
+delete from HostingSugested;
+delete from Hosting;
+delete from mega_event;
+delete from payment_currency;
+delete from credit_card_type;
+delete from company;
+
+delete from _aud_register_detail_payment;
+delete from _aud_register_detail_account_receivable_observation;
+delete from _aud_register_detail_account_receivable_detail;
+delete from _aud_register_detail_account_receivable;
+delete from _aud_register_detail;
+delete from _aud_medical_answer;
+delete from _aud_medical_question;
+delete from _aud_register_docket;
+delete from _aud_Transport_x_Register;
+delete from _aud_TransportClassification;
+delete from _aud_Transport;
+delete from _aud_TransbankPayment;
+delete from _aud_TransbankPaymentParam;
+delete from _aud_register;
+delete from _aud_register_credit;
+delete from _aud_account;
+delete from _aud_credit_card_type;
+delete from _aud_inscription_type;
+delete from _aud_event;
+delete from _aud_event_week;
+delete from _aud_HostingConfirmed;
+delete from _aud_HostingSugested;
+delete from _aud_Hosting;
+delete from _aud_mega_event;
+delete from _aud_payment_currency;
+delete from _aud_credit_card_type;
+
+#2) alter auto_incremento:
+alter table contact auto_increment=2000;
+alter table UserCB auto_increment=12000;
+alter table Cetificate auto_increment=2000;
+alter table CityTeam auto_increment=100;
+alter table CertificateConfigItem auto_increment=2000;
+alter table Feedback auto_increment=100;
+alter table Integrant auto_increment=2000;
+alter table Rendicion auto_increment=100;
+alter table Staff auto_increment=4000;
+alter table city auto_increment=200;
+alter table facilitator auto_increment=200;
+alter table incoming auto_increment=20000;
+alter table outcoming auto_increment=20000;
+alter table participant auto_increment=10000;
+alter table production auto_increment=1000;
+
+
+
+
+

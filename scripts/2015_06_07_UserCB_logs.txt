@@ -1,0 +1,11 @@
+#UserCB
+
+update UserCB set createDate='2014-12-31 00:00:00' where createDate='0000-00-00 00:00:00';
+update UserCB set updateDate='2014-12-31 00:00:00' where updateDate='0000-00-00 00:00:00';
+
+
+#contact
+
+update contact set createDate='2014-12-31 00:00:00' where createDate='0000-00-00 00:00:00';
+update contact set updateDate='2014-12-31 00:00:00' where updateDate='0000-00-00 00:00:00';
+

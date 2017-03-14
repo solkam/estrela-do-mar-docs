@@ -1,0 +1,19 @@
+
+
+select contact_id,count(*) from HostingSugested group by contact_id having count(*)>1;
+
+(9274,13661,14547,16719,18482,18531,18532,18546,18547,18548)
+
+
+
+delete from HostingSugested where id in (53,12,28,35,31,129,178,147,118,120,119);
+delete from HostingSugested where id in (216,162,209,234,210,215);
+
+
+
+delete from HostingSugested where contact_id=18490;
+
+delete from Register where contact_id=18490;
+delete from Account where contact_id=18490;
+
+delete from contact where id=18490;

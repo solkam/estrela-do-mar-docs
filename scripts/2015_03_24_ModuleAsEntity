@@ -1,0 +1,98 @@
+#ambientes: AMZ_85_29, 
+
+#criando os modulos
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('LCB', 'M1', 1, 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('LCB', 'M2', 1, 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('LCB', 'M3', 1, 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('LCB', 'M4', 1, 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4');
+
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KF', 'M1', 1, 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KF', 'M2', 1, 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KF', 'M3', 1, 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KF', 'M4', 1, 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4');
+
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('CE', 'M1_M2', 1, 'Modulo 1,2', 'Modulo 1,2', 'Modulo 1,2', 'Modulo 1,2', 'Modulo 1,2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('CE', 'M3_M4', 1, 'Modulo 3,4', 'Modulo 3,4', 'Modulo 3,4', 'Modulo 3,4', 'Modulo 3,4');
+
+
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('FM', 'M1', 1, 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('FM', 'M2', 1, 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('FM', 'M3', 1, 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('FM', 'M4', 1, 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4');
+
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KW', 'M1', 1, 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KW', 'M2', 1, 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KW', 'M3', 1, 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KW', 'M4', 1, 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4');
+
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('TA', 'M1', 1, 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('TA', 'M2', 1, 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('TA', 'M3', 1, 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('TA', 'M4', 1, 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4');
+
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KA', 'M1', 1, 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KA', 'M2', 1, 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KA', 'M3', 1, 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('KA', 'M4', 1, 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4');
+
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('BD', 'M1', 1, 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('BD', 'M2', 1, 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('BD', 'M3', 1, 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('BD', 'M4', 1, 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4');
+
+#numerologia
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('NU', 'M1', 1, 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('NU', 'M2', 1, 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('NU', 'M1_M2', 1, 'Modulo 1,2', 'Modulo 1,2', 'Modulo 1,2', 'Modulo 1,2', 'Modulo 1,2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('NU', 'M3_M4', 1, 'Modulo 3,4', 'Modulo 3,4', 'Modulo 3,4', 'Modulo 3,4', 'Modulo 3,4');
+
+#natural detox
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('ND', 'M1', 1, 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('ND', 'M2', 1, 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('ND', 'M3', 1, 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('ND', 'M4', 1, 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4');
+
+#MEDITACION
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('ME', 'M1', 1, 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1', 'Modulo 1');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('ME', 'M2', 1, 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2', 'Modulo 2');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('ME', 'M3', 1, 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3', 'Modulo 3');
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('ME', 'M4', 1, 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4', 'Modulo 4');
+
+
+#ajustes em vision del halcon
+insert into Module (school, sigla, flagFormation, descriptionPT, descriptionES, descriptionEN, descriptionIT, descriptionFR) values ('VH', null, 0, 'Vision de Halcon (4 dias)', 'Vision de Halcon (4 dias)', 'Vision de Halcon (4 dias)', 'Vision de Halcon (4 dias)', 'Vision de Halcon (4 dias)');
+
+update event set type='COMPLEMENTAR', name='Visión del Halcon', module_id=43, module=null where school = 'VH' and module_id is null;
+
+#ajustes em coaching
+update event set module_id=10, module='M3_M4' where type='FORMATION' and school='CE' and module in ('M3', 'M4') and module_id is null;
+update event set module_id=9, module='M1_M2' where type='FORMATION' and school='CE' and module in ('M1','M2') and module_id is null;
+
+
+
+
+#gera os update para production:
+select concat('update production set module_id=', m.id, ' where school=''', m.school, ''' and module=''', m.sigla, ''';') from Module m;
+
+
+#gera os update para CertificateConfigItem:
+delete from CertificateConfigItem where school='EM';
+
+#ajusta Certificate Config Item
+alter table CertificateConfigItem modify column module varchar(20) null;
+update CertificateConfigItem set module='M1_M2' where school='CE' and module='M1';
+update CertificateConfigItem set module='M1_M2' where school='CE' and module='M2';
+update CertificateConfigItem set module='M3_M4' where school='CE' and module='M3';
+update CertificateConfigItem set module='M3_M4' where school='CE' and module='M4';
+
+#gera os update para CertificateNumber
+delete from CertificateNumber where school='EM';
+
+select concat('update CertificateNumber set module_id=', m.id, ' where school=''', m.school, ''' and module=''', m.sigla, ''';') from Module m;
+
+
+#genera modulos para eventos en inscripciones
+select concat('update event set module_id=', m.id, ' where school=''', m.school, ''' and module=''', m.sigla, ''';') from Module m;
+
+
+

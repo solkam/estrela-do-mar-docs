@@ -1,0 +1,6 @@
+#atualiza event com a especializacao dos tipos de eventos para dependentes
+  update event set type='DEPENDENT_CHILD' where type='DEPENDENT';
+
+  select distinct type from event;
+  
+  update Rendicion set wayOfPaymentToAdmin='CASH_DOLLAR' where wayOfPaymentToAdmin='OTHER';

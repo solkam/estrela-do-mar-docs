@@ -1,0 +1,66 @@
+
+) dropar table de auditoria (se de erro, ok)
+
+drop table _aud_register_detail_payment;
+drop table _aud_register_detail_account_receivable_observation;
+drop table _aud_register_detail_account_receivable_detail;
+drop table _aud_register_detail_account_receivable;
+drop table _aud_register_detail;
+drop table _aud_medical_answer;
+drop table _aud_medical_question;
+drop table _aud_register_docket;
+drop table _aud_Transport_x_Register;
+drop table _aud_TransportClassification;
+drop table _aud_Transport;
+drop table _aud_TransbankPayment;
+drop table _aud_TransbankPaymentParam;
+drop table _aud_register;
+drop table _aud_register_credit;
+drop table _aud_account;
+drop table _aud_credit_card_type;
+drop table _aud_inscription_type;
+drop table _aud_event;
+drop table _aud_event_week;
+drop table _aud_HostingConfirmed;
+drop table _aud_HostingSugested;
+drop table _aud_Hosting;
+drop table _aud_mega_event;
+drop table _aud_payment_currency;
+drop table _aud_credit_card_type;
+
+drop table _aud_CertificateNumber;
+drop table _aud_CityTeam;         
+drop table _aud_CityTeamMember;   
+drop table _aud_ContactObservation;                       
+drop table _aud_Country;          
+drop table _aud_Integrant;        
+drop table _aud_Module;           
+drop table _aud_Staff;            
+drop table _aud_UserCB;           
+drop table _aud_certificate;      
+drop table _aud_certificate_number;                        
+drop table _aud_city;             
+drop table _aud_company;          
+drop table _aud_contact;          
+drop table _aud_contact_x_profession;                      
+drop table _aud_facilitator;      
+drop table _aud_incoming;         
+drop table _aud_informe_feedback; 
+drop table _aud_informe_financial;
+drop table _aud_outcoming;        
+drop table _aud_participant;      
+drop table _aud_production;       
+drop table _aud_profession;       
+drop table _aud_recipient_informe;
+drop table _aud_user_x_city;      
+drop table _aud_user_x_school;    
+drop table _audit;         
+
+
+) Redeployar
+
+) Gerar dump
+/usr/local/mysql/bin/mysqldump -u solkam -pls -a mundocb --complete-insert > /Users/Solkam/DEV/_backups/mysql_amz22_DEPLOYREADY_2015_05_24.sql
+
+
+

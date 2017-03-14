@@ -1,0 +1,73 @@
+
+# Configurar WildFly no BoxHosting #
+####################################
+
+Uma vez dentro do BoxHosting
+
+
+1) Baixar o WildFly
+cd /home/cb
+wget http://download.jboss.org/wildfly/8.2.0.Final/wildfly-8.2.0.Final.zip
+
+
+2) Descompactar o zip:
+unzip wildfly-8.2.0.Final.zip
+
+
+3) Editar standalone.xml:
+vim /home/cb/wildfly-8.2.0.Final/standalone/
+
+trocar o trecho:
+<remote-destination host="localhost" port="25"/>
+por
+<remote-destination host="smtp.gmail.com" port="465"/>
+
+
+3) Subindo o wildfly:
+Va para a pasta bin e execute:
+./standalone.sh
+
+
+4) Instalando o datasource do MySQL:
+Deixe o wildfly rodando nesta janela e abra outra, e va para o diretorio bin.
+Entre na interface de linha de comando do jboss:
+./jboss-cli.sh --connect
+
+Uma vez dentro do cli: digite os comandos:
+ module add --name=com.mysql --resources=/home/cb/softwares/mysql-connector-java-5.1.34-bin.jar --dependencies=javax.api,javax.transaction.api
+ 
+ /subsystem=datasources/jdbc-driver=mysql:add(driver-name="mysql",driver-module-name="com.mysql",driver-class-name="com.mysql.jdbc.Driver",driver-xa-datasource-class-name="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource")
+ 
+ xa-data-source add --name=MySqlXA --jndi-name=java:/mundocbDS --driver-name="mysql"
+
+ exit
+
+
+5) Criando um usuario para o console admin:
+Na pasta bin, execute:
+./add-user.sh
+
+Siga os passos
+
+
+6) Testar o Datasource pelo Console de Administracao
+Abra um navegador e digite:
+http://localhost:8080
+
+Clique em Adminitration Console
+Use as credenciais criadas
+
+Vá em Profile > Connector > Datasource e faça os ajustes necessários para o datasource MySQLPool funcionar
+
+
+7) Configurar o envio de email:
+Vá em Profile > Connector > Mail
+
+No ultimo elemento que aparece, cliqu eem 'View'
+
+Clique em Edit e coloque o username e password da conta do gmail
+Deixar checado 'Use SSL?'
+
+Salvar
+
+>> Pronto, o WildFly está pronto para receber os deployments

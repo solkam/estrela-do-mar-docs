@@ -1,0 +1,47 @@
+
+#alter table para aumentar os campos de feedback:
+
+alter table Feedback modify column autofeedbackInstructor1Name varchar(1000);
+alter table Feedback modify column autofeedbackInstructor1Negative varchar(1000);
+alter table Feedback modify column autofeedbackInstructor1Positive varchar(1000);
+alter table Feedback modify column autofeedbackInstructor2Name varchar(1000);
+alter table Feedback modify column autofeedbackInstructor2Negative varchar(1000);
+alter table Feedback modify column autofeedbackInstructor2Positive varchar(1000);
+alter table Feedback modify column autofeedbackInstructor3Name varchar(1000);
+alter table Feedback modify column autofeedbackInstructor3Negative varchar(1000);
+alter table Feedback modify column autofeedbackInstructor3Positive varchar(1000);
+alter table Feedback modify column autofeedbackInstructor4Name varchar(1000);
+alter table Feedback modify column autofeedbackInstructor4Negative varchar(1000);
+alter table Feedback modify column autofeedbackInstructor4Positive varchar(1000);
+
+alter table Feedback modify column feedbackComunicationToInstructor1 varchar(1000);
+alter table Feedback modify column feedbackComunicationToInstructor2 varchar(1000);
+alter table Feedback modify column feedbackComunicationToInstructor3 varchar(1000);
+alter table Feedback modify column feedbackComunicationToInstructor4 varchar(1000);
+
+alter table Feedback modify column  feedbackImageToInstructor1 varchar(1000);
+alter table Feedback modify column  feedbackImageToInstructor2 varchar(1000);
+alter table Feedback modify column  feedbackImageToInstructor3 varchar(1000);
+alter table Feedback modify column  feedbackImageToInstructor4 varchar(1000);
+
+alter table Feedback modify column feedbackStaffHandleToInstructor1 varchar(1000);
+alter table Feedback modify column feedbackStaffHandleToInstructor2 varchar(1000);
+alter table Feedback modify column feedbackStaffHandleToInstructor3 varchar(1000);
+alter table Feedback modify column feedbackStaffHandleToInstructor4 varchar(1000);
+
+alter table Feedback modify column feedbackTimeHandleToInstructor1 varchar(1000);
+alter table Feedback modify column feedbackTimeHandleToInstructor2 varchar(1000);
+alter table Feedback modify column feedbackTimeHandleToInstructor3 varchar(1000);
+alter table Feedback modify column feedbackTimeHandleToInstructor4 varchar(1000);
+
+alter table Feedback modify column instructorFollowers varchar(1000);
+alter table Feedback modify column instructorLeader varchar(1000);
+alter table Feedback modify column productorsElite varchar(1000);
+
+alter table Feedback modify column autofeedbackProductionNegative varchar(1000);
+alter table Feedback modify column autofeedbackProductionPositive varchar(1000);
+
+alter table Feedback modify column feedbackToProductionPositive varchar(1000);
+alter table Feedback modify column feedbackToProductionPositive varchar(1000);
+
+alter table Feedback modify column emailRecipients varchar(1000);

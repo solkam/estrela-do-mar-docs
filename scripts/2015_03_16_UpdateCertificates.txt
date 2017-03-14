@@ -1,0 +1,25 @@
+#ambientes: 
+
+# ANTES DO DEPLOY
+drop table informe_16points;
+drop table informe_feedback;
+drop table informe_financial;
+
+alter table certificate_config_item rename CertificateConfigItem;
+alter table certificate_number rename CertificateNumber;
+alter table certificate rename Certificates;
+alter table Certificates rename Certificate;
+
+alter table integrant rename integrants;
+alter table integrants rename Integrant;
+
+update CertificateConfigItem set attribute='FACILITATOR_1_LINE' where attribute='FACILITATOR_LINE';
+
+
+
+# DEPOIS DO DEPLOY
+
+update Integrant set flagInformeFeedback=1 where flagInformeFeedback is null;
+update Integrant set flagInformeRendicion=1 where flagInformeRendicion is null;
+
+

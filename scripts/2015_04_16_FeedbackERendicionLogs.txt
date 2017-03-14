@@ -1,0 +1,18 @@
+#Feedback
+alter table Feedback add column createDate datetime;
+alter table Feedback add column updateDate datetime;
+
+select concat('update Feedback set createDate=''', p.lastDate, ' 00:00:00''', ' where id=', f.id, ';')
+from Feedback f, production p where f.production_id=p.id and f.createDate is null;
+
+update Feedback set updateDate=createDate where updateDate is null;
+
+
+#Rendicion
+alter table Rendicion add column createDate datetime;
+alter table Rendicion add column updateDate datetime;
+
+select concat('update Rendicion set createDate=''', p.lastDate, ' 00:00:00''', ' where id=', r.id, ';')
+from Rendicion r, production p where r.production_id=p.id and r.createDate is null;
+
+update Rendicion set updateDate=createDate where updateDate is null;

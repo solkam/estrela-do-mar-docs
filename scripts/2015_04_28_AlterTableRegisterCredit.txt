@@ -1,0 +1,15 @@
+#ambientes: box, amz122.20, amz85.29
+
+alter table register_credit modify column paymentCurrency_id bigint(20) null;
+
+alter table register_credit modify column saleReceipt varchar(30) null;
+
+alter table register_detail_payment modify column saleReceipt varchar(30) null;
+
+update register_credit set saleReceipt=null where trim(saleReceipt) = '';
+
+update register_detail_payment set saleReceipt=null where trim(saleReceipt) = '';
+
+#conferindo:
+select saleReceipt, count(*) from register_credit;
+select saleReceipt, count(*) from register_detail_payment;

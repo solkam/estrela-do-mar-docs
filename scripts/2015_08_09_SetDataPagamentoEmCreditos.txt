@@ -1,0 +1,37 @@
+
+update register_credit set paymentDate='2015-06-17' where id=14722;
+
+update register_credit set paymentDate='2015-01-24' where id=14726;
+
+update register_credit set paymentDate='2015-06-30' where id=14729;
+
+update register_credit set paymentDate='2015-06-30' where id=14730;
+
+update register_credit set paymentDate='2015-02-05' where id=14731;
+
+update register_credit set paymentDate='2015-02-03' where id=14732;
+
+update register_credit set paymentDate='2015-06-25' where id=14733;
+
+update register_credit set paymentDate='2015-06-22' where id=14735;
+
+update register_credit set paymentDate='2015-02-09' where id=14737;
+
+update register_credit set paymentDate='2015-07-24' where id=14740;
+
+update register_credit set paymentDate='2015-05-29' where id=14741;
+
+update register_credit set paymentDate='2015-07-27' where id=14745;
+
+update register_credit set paymentDate='2015-07-13' where id=14749;
+
+update register_credit set paymentDate='2015-08-06' where id=14750;
+
+update register_credit set paymentDate='2015-08-08' where id=14752;
+
+update register_credit set paymentDate='2015-05-30' where id=14716;
+update register_credit set paymentDate='2015-07-23' where id=14754;
+update register_credit set paymentDate='2015-07-01' where id=14755;
+
+
+

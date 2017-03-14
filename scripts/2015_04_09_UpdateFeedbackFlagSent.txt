@@ -1,0 +1,5 @@
+#Cria e Atualiza o novo flag em Feedback
+
+alter table Feedback add column flagSent tinyint(1);
+
+update Feedback set flagSent=1 where flagSent is null;

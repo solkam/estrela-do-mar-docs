@@ -1,0 +1,18 @@
+#Atualizacao das observacoes de contact da velha estrutura para a nova:
+
+#1) criando as novas colunas (se JPA nao o fez ainda)
+alter table ContactObservation modify column createDate datetime null;
+alter table ContactObservation modify column updateDate datetime null;
+
+#2) atualizar o conteudo a partir da velha tabela:
+delete from ContactObservation;
+
+insert into ContactObservation (contact_id            , text   , entryDate       , createDate     , createdBy)
+select                          o.observationOwner_id , o.text , o.obsEntryDate  , o.obsSystemDate, c.civilName
+from observation o, contact c
+where o.observationWritter_id = c.id;
+
+
+#3) drop a velha tabela
+drop table observation;
+

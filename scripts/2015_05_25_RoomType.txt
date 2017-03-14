@@ -1,0 +1,23 @@
+#RoomType agora eh Entity
+	
+insert into RoomType (code, description, maxSupported, flagActive) values ('DUPLO_SOLTEIRO', 'Duplo Cama Solteiro', 2, true);
+insert into RoomType (code, description, maxSupported, flagActive) values ('DUPLO_CASAL',    'Duplo Cama Casa',     2, true);
+
+insert into RoomType (code, description, maxSupported, flagActive) values ('DUPLO_SOLTEIRO__1CRIANCA', 'Duplo Solteiro + 1 Criança', 3, true);
+insert into RoomType (code, description, maxSupported, flagActive) values ('DUPLO_SOLTEIRO_2CRIANCA' , 'Duplo Solteiro + 2 Criança', 4, true);
+
+insert into RoomType (code, description, maxSupported, flagActive) values ('DUPLO_CASAL_1CRIANCA' ,'Duplo Casal + 1 Criança',3 ,true);
+insert into RoomType (code, description, maxSupported, flagActive) values ('DUPLO_CASAL_2CRIANCA' ,'Duplo Casal + 2 Criança',3 ,true);
+
+insert into RoomType (code, description, maxSupported, flagActive) values ('TRIPLO_SOLTEIRO', 'Tripo Solteiro',     2, true);
+insert into RoomType (code, description, maxSupported, flagActive) values ('QUAD_SOLTEIRO',   'Quadruplo Solteiro', 2, true);
+
+
+update Hosting set roomType_code='DUPLO_SOLTEIRO'       where roomType='SINGLE_2';
+update Hosting set roomType_code='DUPLO_CASAL'          where roomType='COUPLE_2';
+update Hosting set roomType_code='TRIPLO_SOLTEIRO'      where roomType='SINGLE_3';
+update Hosting set roomType_code='DUPLO_CASAL_2CRIANCA' where roomType='FAMILY_4';
+update Hosting set roomType_code='QUAD_SOLTEIRO'        where roomType='SINGLE_4';
+
+
+alter table Hosting drop column roomType;

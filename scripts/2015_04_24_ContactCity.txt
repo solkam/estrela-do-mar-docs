@@ -1,0 +1,60 @@
+#Ambientes executados: Box, Amz29, Amz22
+
+# CIDADE EM CONTACT (deixa null quem está errado)
+# #################
+update contact set city=null where city = '';
+update contact set city=null where city like '?%';
+
+update contact set city=null where city like 'pp%';
+update contact set city=null where city like 'xx%';
+
+update contact set city=null where lower(city) = 'a';
+update contact set city=null where lower(city) = 'b';
+update contact set city=null where lower(city) = 'c';
+update contact set city=null where lower(city) = 'd';
+update contact set city=null where lower(city) = 'e';
+update contact set city=null where lower(city) = 'f';
+update contact set city=null where lower(city) = 'g';
+update contact set city=null where lower(city) = 'h';
+update contact set city=null where lower(city) = 'i';
+update contact set city=null where lower(city) = 'j';
+update contact set city=null where lower(city) = 'k';
+update contact set city=null where lower(city) = 'l';
+update contact set city=null where lower(city) = 'm';
+update contact set city=null where lower(city) = 'n';
+update contact set city=null where lower(city) = 'o';
+update contact set city=null where lower(city) = 'p';
+update contact set city=null where lower(city) = 'q';
+update contact set city=null where lower(city) = 'r';
+update contact set city=null where lower(city) = 's';
+update contact set city=null where lower(city) = 't';
+update contact set city=null where lower(city) = 'u';
+update contact set city=null where lower(city) = 'v';
+update contact set city=null where lower(city) = 's';
+update contact set city=null where lower(city) = 'y';
+update contact set city=null where lower(city) = 'w';
+update contact set city=null where lower(city) = 'z';
+
+update contact set city=null where city = '0';
+update contact set city=null where city = '1';
+update contact set city=null where city = '2';
+update contact set city=null where city = '3';
+update contact set city=null where city = '4';
+update contact set city=null where city = '5';
+update contact set city=null where city = '6';
+update contact set city=null where city = '7';
+update contact set city=null where city = '8';
+update contact set city=null where city = '9';
+update contact set city=null where city = '123';
+update contact set city=null where city = '000';
+
+update contact set city=null where lower(city) like 'asd%';
+update contact set city=null where lower(city) like 'fg%';
+update contact set city=null where lower(city) like 'fds%';
+update contact set city=null where lower(city) like '´´p';
+
+#testando o resultado
+select city, count(*) from contact group by city;
+
+
+

@@ -1,0 +1,19 @@
+#COM FICHA MEDICA
+select c.civilName, c.name, mq.textES, ma.booleanAnswer, ma.textAnswer
+from medical_answer ma, medical_question mq, register r, contact c
+where ma.register_id=r.id
+and  ma.question_id=mq.id
+and  r.contact_id=c.id
+and  r.megaEvent_id=18
+and  r.status='CHECKEDIN';
+
+#SEM FICHA MEDICA
+select c.civilName, c.name
+from register r, contact c
+where r.contact_id=c.id
+and  r.megaEvent_id=18
+and  r.status='CHECKEDIN'
+and not exists (select 1 from medical_answer ma where ma.register_id=r.id)
+order by c.civilName;
+
+

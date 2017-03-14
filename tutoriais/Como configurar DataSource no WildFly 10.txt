@@ -1,0 +1,22 @@
+
+1) Criar um usuario administrador no WildFly com add-user.sh
+usuario: solkam
+pass: sas
+
+2) Copie driver do mysql (mysql-connector-java-5.1.36-bin.jar) para a pasta c:\SOFTWARE (se não existir, crie uma)
+
+3) Va em <wildfly>/bin
+jboss-cli.bat --connect
+
+
+4) Se nao criou usuario no BD, criar com: grant all privileges on *.* to 'solkam'@'localhost' identified by '???';
+
+
+3) Execute os seguintes comando na interface jboss-cli (criar usuario e database no banco)
+  
+  module add --name=com.mysql --resources=c:\SOFTWARES\mysql-connector-java-5.1.36-bin.jar --dependencies=javax.api,javax.transaction.api
+ 
+  /subsystem=datasources/jdbc-driver=mysql:add(driver-name="mysql",driver-module-name="com.mysql",driver-class-name="com.mysql.jdbc.Driver")
+ 
+  data-source add --jndi-name=java:/estrelaDS --name=MySqlEstrela --connection-url=jdbc:mysql://localhost/db_estrela --driver-name=mysql --user-name=solkam --password=???
+ 

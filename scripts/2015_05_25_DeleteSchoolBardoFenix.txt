@@ -1,0 +1,13 @@
+#ambientes: box, amz29, amz211
+
+
+#user
+delete from user_x_city where user_id in (select id from UserCB where defaultSchool='BF');
+delete from user_x_school where school = 'BF';
+delete from UserCB where defaultSchool='BF';
+
+#contact
+update contact set rootSchool='LCB' where rootSchool='BF';
+
+
+

@@ -1,0 +1,109 @@
+
+
+#consultando o conteudo das tabelas de inscricao:
+select 'register_detail_payment', count(*) from register_detail_payment
+union all
+select 'register_detail_account_receivable_observation', count(*) from register_detail_account_receivable_observation
+union all
+select 'register_detail_account_receivable_detail', count(*) from register_detail_account_receivable_detail
+union all
+select 'register_detail_account_receivable', count(*) from register_detail_account_receivable
+union all
+select 'register_detail', count(*) from register_detail
+union all
+select 'medical_answer', count(*) from medical_answer
+union all
+select 'medical_question', count(*) from medical_question
+union all
+select 'register_docket', count(*) from register_docket
+union all
+select 'Transport_x_Register', count(*) from Transport_x_Register
+union all
+select 'TransportClassification', count(*) from TransportClassification
+union all
+select 'Transport', count(*) from Transport
+union all
+select 'TransbankPayment', count(*) from TransbankPayment
+union all
+select 'TransbankPaymentParam', count(*) from TransbankPaymentParam
+union all
+select 'register', count(*) from register
+union all
+select 'register_credit', count(*) from register_credit
+union all
+select 'account', count(*) from account
+union all
+select 'credit_card_type', count(*) from credit_card_type
+union all
+select 'inscription_type', count(*) from inscription_type
+union all
+select 'event', count(*) from event
+union all
+select 'event_week', count(*) from event_week
+union all
+select 'HostingConfirmed', count(*) from HostingConfirmed
+union all
+select 'HostingSugested', count(*) from HostingSugested
+union all
+select 'Hosting', count(*) from Hosting
+union all
+select 'mega_event', count(*) from mega_event
+union all
+select 'payment_currency', count(*) from payment_currency
+union all
+select 'credit_card_type', count(*) from credit_card_type;
+
+
+
+#consulta o conteudo das auditorias
+select '_aud_register_detail_payment', count(*) from _aud_register_detail_payment
+union all
+select '_aud_register_detail_account_receivable_observation', count(*) from _aud_register_detail_account_receivable_observation
+union all
+select '_aud_register_detail_account_receivable_detail', count(*) from _aud_register_detail_account_receivable_detail
+union all
+select '_aud_register_detail_account_receivable', count(*) from _aud_register_detail_account_receivable
+union all
+select '_aud_register_detail', count(*) from _aud_register_detail
+union all
+select '_aud_medical_answer', count(*) from _aud_medical_answer
+union all
+select '_aud_medical_question', count(*) from _aud_medical_question
+union all
+select '_aud_register_docket', count(*) from _aud_register_docket
+union all
+select '_aud_Transport_x_Register', count(*) from _aud_Transport_x_Register
+union all
+select '_aud_TransportClassification', count(*) from _aud_TransportClassification
+union all
+select '_aud_Transport', count(*) from _aud_Transport
+union all
+select '_aud_TransbankPayment', count(*) from _aud_TransbankPayment
+union all
+select '_aud_TransbankPaymentParam', count(*) from _aud_TransbankPaymentParam
+union all
+select '_aud_register', count(*) from _aud_register
+union all
+select '_aud_register_credit', count(*) from _aud_register_credit
+union all
+select '_aud_account', count(*) from _aud_account
+union all
+select '_aud_credit_card_type', count(*) from _aud_credit_card_type
+union all
+select '_aud_inscription_type', count(*) from _aud_inscription_type
+union all
+select '_aud_event', count(*) from _aud_event
+union all
+select '_aud_event_week', count(*) from _aud_event_week
+union all
+select '_aud_HostingConfirmed', count(*) from _aud_HostingConfirmed
+union all
+select '_aud_HostingSugested', count(*) from _aud_HostingSugested
+union all
+select '_aud_Hosting', count(*) from _aud_Hosting
+union all
+select '_aud_mega_event', count(*) from _aud_mega_event
+union all
+select '_aud_payment_currency', count(*) from _aud_payment_currency
+union all
+select '_aud_credit_card_type', count(*) from _aud_credit_card_type;

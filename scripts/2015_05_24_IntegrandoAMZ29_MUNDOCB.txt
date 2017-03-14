@@ -1,0 +1,74 @@
+#Integracao de amz29 (seminario) para mundocb;
+
+
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+
+
+#CONTACT
+update amz29.contact set country='?' where country is null;
+
+insert into mundocb.contact 
+(id, address, birthDate, cbRole, city, civilName,companyName,country,createdBy,email,flagConsultant,flagProductor,gender,identityDocument,identityDocumentType
+,indicateBy,name,neighborhood,rootSchool,skype,state,telephone1,telephone2,telephone3,trainnerLevel,trainnerType,tshirtSize,updatedBy,zipPostal,productorContact_id,trainnerContact_id)
+select 
+ id, address, birthDate, cbRole, city, civilName,companyName,country,createdBy,email,flagConsultant,flagProductor,gender,identityDocument,identityDocumentType
+,indicateBy,name,neighborhood,rootSchool,skype,state,telephone1,telephone2,telephone3,trainnerLevel,trainnerType,tshirtSize,updatedBy,zipPostal,productorContact_id,trainnerContact_id
+from amz29.contact c29
+where not exists (select 1 from mundocb.contact c where c29.id=c.id);
+
+
+#CONTACT OBSERVATION
+insert into mundocb.ContactObservation (id,createDate,createdBy,entryDate,text,updateDate,contact_id)
+select id,createDate,createdBy,entryDate,text,updateDate,contact_id
+from amz29.ContactObservation c29
+where not exists (select 1 from mundocb.ContactObservation c where c.id=c29.id);
+
+
+#COUNTRY
+insert into mundocb.Country (code,createdDate,flagActive,idiom,name)
+select code,createdDate,flagActive,idiom,name
+from amz29.Country c29
+where not exists (select 1 from mundocb.Country c where c.code=c29.code);
+
+
+#CITY
+insert into mundocb.city (id,flagActive,name,country_code)
+select id,flagActive,name,country_code
+from amz29.city c29
+where not exists (select 1 from mundocb.city c where c.id=c29.id);
+
+
+
+#USERCB
+insert into mundocb.UserCB (id,createDate,createdBy,defaultIdiom,defaultSchool,password,profile,updateDate,updatedBy,contact_id,defaultCity_id)
+select id,createDate,createdBy,defaultIdiom,defaultSchool,password,profile,updateDate,updatedBy,contact_id,defaultCity_id
+from amz29.UserCB c29
+where not exists (select 1 from mundocb.UserCB c where c.id=c29.id);
+
+delete from amz29.user_x_school where user_id in ( -45,-33,-8,-7,-5,-3,368,604 );
+
+# CONFERIR: deve retornar zero:
+select distinct a.user_id from amz29.user_x_school a where not exists (select 1 from amz29.UserCB b where a.user_id=b.id);
+ 
+
+insert into mundocb.user_x_school (user_id,school)
+select distinct user_id,school
+from amz29.user_x_school c29
+where not exists (select 1 from mundocb.user_x_school c where c.user_id=c29.user_id and c.school=c29.school);
+
+
+delete from amz29.user_x_city where user_id in (-51,-45,-33,-8,-7,-5,-3,368,604);
+
+# CONFERIR: deve retornar zero:
+select distinct a.user_id from amz29.user_x_city a where not exists (select 1 from amz29.UserCB b where a.user_id=b.id); 
+
+insert into mundocb.user_x_city (user_id, city_id)
+select distinct user_id, city_id
+from amz29.user_x_city c29
+where not exists (select 1 from mundocb.user_x_city c where c.user_id=c29.user_id and c.city_id=c29.city_id);
+
+
+
+
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=1 */;
+

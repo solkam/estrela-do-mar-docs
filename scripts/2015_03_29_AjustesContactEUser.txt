@@ -1,0 +1,47 @@
+
+# ajustes em contato #
+######################
+
+#1) criacao da coluna createdBy como varchar
+alter table contact add column createdBy varchar(100);
+
+#2) update deste coluna com o nome do contato em createdByContact
+select concat('update contact set createdBy=''', c2.civilName, ''' where id=',c1.id, ';')
+from contact c1, contact c2
+where c1.createdByContact_id = c2.id
+and   c1.createdByContact_id is not null;
+
+#3) update de quem nao tem createdByContact
+update contact set createdBy='Desconhecido' where createdByContact_id is null;
+
+#4) drop column FK de auto-relacionamento
+alter table contact drop FOREIGN KEY FK38B72420C320126E;
+alter table contact drop KEY FK38B72420C320126E;
+alter table contact drop column createdByContact_id;
+
+
+
+# ajustes em usuario #
+######################
+
+#1) criacao da coluna createBy:
+alter table UserCB add column createdBy varchar(100);
+
+#2) update da nova coluna com nome do contato
+select concat('update UserCB set createdBy=''', c2.civilName, ''' where id=', u1.id, ';' )
+from UserCB u1, UserCB u2, contact c2
+where u1.createdByUser_id = u2.id
+and   u2.contact_id = c2.id;
+
+#3) update de quem nao tem createdByUser:
+update UserCB set createdBy='Desconhecido' where createdByUser_id is null;
+update UserCB set createdBy='Desconhecido' where createdBy is null;
+
+#4) Drop column FK de auto-relacionamento:
+alter table UserCB drop foreign key FK9790198A12CB1485;
+alter table UserCB drop key FK9790198A12CB1485;
+alter table UserCB drop column createdByUser_id;
+
+
+
+
